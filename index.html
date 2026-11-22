@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Manor Garage Plymouth · MOTs, diagnostics and repairs on Exeter Street (concept)</title>
+<meta name="description" content="Concept redesign: owner-run back-street garage at 154 Exeter St, Plymouth. MOTs, diagnostics and repairs.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23a3341c'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-weight='900' font-size='17' fill='%23f8f2e6' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+html,body{background:#efe6d4;color:#1e1915}
+:root{
+  --paper:#efe6d4;--rule:rgba(74,46,24,.10);--rule-major:rgba(74,46,24,.16);
+  --ink:#1e1915;--ink-70:rgba(30,25,21,.75);--ink-45:rgba(30,25,21,.52);--line:rgba(30,25,21,.18);
+  --card:#f8f2e6;--rust:#a3341c;--rust-deep:#7e2412;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --gut:clamp(20px,4vw,56px);
+  --sans:Archivo,"Arial Black",Arial,sans-serif;
+  --mono-f:"DM Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html{overflow-x:clip;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font:400 17px/1.6 var(--sans);position:relative;
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
+body::before{content:"";position:absolute;top:0;bottom:0;left:max(16px,calc(50% - 664px));width:5px;border-left:1px solid rgba(163,52,28,.35);border-right:1px solid rgba(163,52,28,.35);pointer-events:none}
+::selection{background:rgba(163,52,28,.22)}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.mono{font:500 12px/1.3 var(--mono-f);letter-spacing:.12em;text-transform:uppercase}
+.x{font-stretch:125%;font-weight:800;letter-spacing:-.02em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--gut)}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:12px 12px 12px 26px;border-radius:999px;font:700 15px/1 var(--sans);letter-spacing:.03em;text-decoration:none;white-space:nowrap;transition:background-color .2s,transform .2s}
+.btn i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;transition:transform .25s cubic-bezier(.4,0,.2,1)}
+.btn svg{width:16px;height:16px}
+.btn--rust{background:var(--rust);color:var(--card)}
+.btn--rust i{background:var(--card);color:var(--rust)}
+.btn--rust:hover{background:var(--rust-deep)}
+.btn--line{box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink)}
+.btn--line i{background:var(--ink);color:var(--card)}
+.btn--line:hover{background:rgba(30,25,21,.05)}
+.btn:hover i{transform:rotate(-20deg)}
+.btn:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+
+.ribbon{background:var(--ink);color:rgba(239,230,212,.88);font:500 13px/1.35 var(--sans);text-align:center;padding:8px 16px;position:relative;z-index:21}
+header.top{position:sticky;top:0;z-index:20;background:rgba(239,230,212,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.badge{width:40px;height:40px;border-radius:50%;background:var(--rust);color:var(--card);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--rust),inset 0 0 0 4.5px var(--card);font:800 17px/1 var(--sans);font-stretch:125%}
+.brand b{display:block;font:800 18px/1.05 var(--sans);font-stretch:125%;letter-spacing:-.01em}
+.brand small{display:block;font:500 10px/1.3 var(--mono-f);letter-spacing:.14em;color:var(--ink-45);margin-top:3px}
+nav.links{display:flex;gap:30px}
+nav.links a{font:500 15px/1 var(--sans);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+nav.links a:hover{border-color:var(--rust)}
+.btn--sm{min-height:46px;padding:7px 7px 7px 20px;font-size:14px}
+
+/* hero */
+.hero{padding:24px 0 20px;text-align:center}
+.micro{display:flex;justify-content:center;align-items:center;gap:14px;font:500 11px/1 var(--mono-f);letter-spacing:.16em;color:var(--ink-45)}
+.micro .rule{width:40px;height:2px;background:var(--rust)}
+.eyebrow{margin-top:14px}
+h1{font:800 clamp(40px,5.5vw,84px)/.95 var(--sans);font-stretch:125%;letter-spacing:-.035em;margin-top:12px}
+h1 .ln{display:block;overflow:hidden;padding:.02em 0 .1em;margin-bottom:-.1em}
+h1 .ln>span{display:inline-block}
+h1 em{font-style:normal;color:var(--rust)}
+.hero-sub{font-size:18px;color:var(--ink-70);max-width:46rem;margin:16px auto 0}
+.ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+.elev{margin:22px auto 0;max-width:1120px;padding:0 clamp(8px,2vw,24px)}
+.elev-box{overflow:hidden}
+.elev svg{width:100%;height:auto}
+.e-line{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+.e-thin{fill:none;stroke:var(--ink);stroke-width:1.3}
+.e-hid{fill:none;stroke:var(--ink-45);stroke-width:1.4;stroke-dasharray:6 5}
+.e-card{fill:var(--card)}
+.shutter{transition:transform 1.7s cubic-bezier(.65,0,.35,1)}
+.swing{transform-box:fill-box;transform-origin:50% 0}
+@keyframes sway{0%{transform:rotate(0)}20%{transform:rotate(5deg)}45%{transform:rotate(-3.5deg)}70%{transform:rotate(1.5deg)}100%{transform:rotate(0)}}
+.swing.go{animation:sway 1.4s cubic-bezier(.3,.6,.4,1)}
+.elev-cap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 4px 0;font:500 10px/1.4 var(--mono-f);letter-spacing:.14em;color:var(--ink-45);text-align:left}
+.toggle{display:none;background:none;border:1.5px solid var(--ink);border-radius:999px;padding:8px 14px;font:500 11px/1 var(--mono-f);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+.toggle:hover{background:var(--ink);color:var(--card)}
+.js .toggle{display:inline-block}
+
+/* sections */
+section.sec{padding:clamp(80px,10vw,128px) 0}
+.kick{display:block;margin-bottom:16px;color:var(--rust)}
+h2{font:800 clamp(36px,4.6vw,68px)/1 var(--sans);font-stretch:125%;letter-spacing:-.03em}
+h2 em{font-style:normal;color:var(--rust)}
+.intro-l{font-size:17px;color:var(--ink-70);margin-top:16px;max-width:34rem}
+
+.tags{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:84px}
+.tag{position:relative;background:var(--card);border:1.5px solid var(--ink);padding:66px 32px 30px;min-height:360px;display:flex;flex-direction:column;clip-path:polygon(22px 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%,0 22px);transition:transform .3s var(--ease),box-shadow .3s;outline-offset:6px}
+.tag-wrap{position:relative;transition:transform .3s var(--ease)}
+.tag-wrap:nth-child(1){transform:rotate(-1.6deg)}
+.tag-wrap:nth-child(2){transform:rotate(1.1deg)}
+.tag-wrap:nth-child(3){transform:rotate(-.6deg)}
+.tag-wrap:hover,.tag-wrap:focus-within{transform:rotate(0) translateY(-6px)}
+.tag-wrap::before{content:"";position:absolute;left:50%;top:-44px;height:68px;border-left:1.5px solid var(--ink);transform:translateX(-50%) rotate(4deg);transform-origin:bottom}
+.tag::before{content:"";position:absolute;left:50%;top:18px;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 4px var(--rust),inset 0 1px 2px rgba(0,0,0,.25)}
+.tag::after{content:"";position:absolute;left:22px;right:22px;top:56px;border-top:1px dashed var(--line)}
+.tag .mono{color:var(--ink-45)}
+.tag h3{font:800 40px/1 var(--sans);font-stretch:125%;letter-spacing:-.03em;margin-top:16px}
+.tag p{font-size:17px;color:var(--ink-70);margin-top:14px}
+.tag .ask{margin-top:auto;padding-top:28px;display:flex;align-items:center;gap:10px}
+.tag .ask::after{content:"";flex:1;border-top:1px dashed var(--line)}
+.tag .big{position:absolute;right:20px;bottom:48px;font:800 96px/1 var(--sans);font-stretch:125%;color:rgba(163,52,28,.09);letter-spacing:-.06em;pointer-events:none}
+
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.ph{background:var(--card);padding:12px 12px 14px;border:1px solid var(--line);transform:rotate(-1deg);box-shadow:0 30px 50px -36px rgba(30,25,21,.55)}
+.ph img{width:100%;height:auto;aspect-ratio:4/4.5;object-fit:cover;object-position:50% 70%}
+.ph .mono{display:flex;justify-content:space-between;font-size:10px;color:var(--ink-45);margin-top:10px}
+.ledger{list-style:none;padding:0;margin:30px 0 0;border-top:2px solid var(--ink)}
+.ledger li{display:grid;grid-template-columns:64px 1fr;border-bottom:1px solid var(--rule-major)}
+.ledger .n{font:500 13px/1 var(--mono-f);color:var(--rust);padding:24px 0 0;border-right:1px solid rgba(163,52,28,.4);letter-spacing:.1em}
+.ledger div{padding:18px 0 18px 22px}
+.ledger b{display:block;font:700 22px/1.25 var(--sans)}
+.ledger span{display:block;color:var(--ink-70);font-size:16px;margin-top:4px}
+
+.find-top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end}
+.strip{margin-top:40px;background:var(--card);border:1px solid var(--line);position:relative}
+.strip svg{width:100%;height:auto}
+.strip .cap{position:absolute;right:14px;bottom:10px;font:500 10px/1 var(--mono-f);letter-spacing:.14em;color:var(--ink-45)}
+.find-addr{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-top:18px;font-size:18px}
+.find-addr .mono{color:var(--ink-45);align-self:center}
+
+.contact{background:var(--rust);color:var(--card);text-align:center;background-image:linear-gradient(rgba(248,242,230,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(248,242,230,.08) 1px,transparent 1px);background-size:32px 32px}
+.contact .kick{color:rgba(248,242,230,.75)}
+.contact h2{font-size:clamp(40px,6vw,88px)}
+.bigtel{display:inline-block;margin-top:40px;font:800 clamp(34px,6.4vw,92px)/1 var(--sans);font-stretch:125%;letter-spacing:-.03em;text-decoration:none;border-bottom:3px solid rgba(248,242,230,.35);padding-bottom:8px;transition:border-color .2s}
+.bigtel:hover{border-color:var(--card)}
+.contact .wa{display:block;margin-top:16px;color:rgba(248,242,230,.8)}
+.pills{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:40px}
+.pills a{display:inline-flex;align-items:center;gap:12px;min-height:52px;padding:10px 22px 10px 12px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(248,242,230,.7);font:700 16px/1.2 var(--sans);text-decoration:none;overflow-wrap:anywhere;transition:background-color .2s}
+.pills a i{flex:none;width:32px;height:32px;border-radius:50%;background:var(--card);color:var(--rust);display:grid;place-items:center}
+.pills a i svg{width:16px;height:16px}
+.pills a:hover{background:rgba(248,242,230,.12)}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--ink-70);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer nav a{text-decoration:none}footer nav a:hover{text-decoration:underline}
+footer .mono{font-size:10px;color:var(--ink-45);flex-basis:100%}
+
+.callbar{display:none}
+@media (max-width:767px){
+  .callbar{display:flex;position:fixed;z-index:40;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));height:56px;border-radius:999px;background:var(--rust);color:var(--card);align-items:center;justify-content:center;gap:12px;font:700 15px/1 var(--sans);letter-spacing:.03em;text-decoration:none;box-shadow:0 10px 30px -10px rgba(30,25,21,.6)}
+  .callbar svg{width:18px;height:18px}
+  footer{padding-bottom:96px}
+}
+
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+.js .tags [data-reveal].is-in:nth-child(1){transform:rotate(-1.6deg)}
+.js .tags [data-reveal].is-in:nth-child(2){transform:rotate(1.1deg)}
+.js .tags [data-reveal].is-in:nth-child(3){transform:rotate(-.6deg)}
+.js .tags [data-reveal].is-in:hover,.js .tags [data-reveal].is-in:focus-within{transform:rotate(0) translateY(-6px)}
+.js .intro h1 .ln>span{transform:translateY(105%);transition:transform .8s var(--ease) .2s}
+.js .intro h1 .ln:nth-child(2)>span{transition-delay:.31s}
+.js .intro.go h1 .ln>span{transform:none}
+.js .intro .fade{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease) .5s,transform .6s var(--ease) .5s}
+.js .intro .fade.d1{transition-delay:.62s}
+.js .intro.go .fade{opacity:1;transform:none}
+
+@media (max-width:959px){
+  nav.links{display:none}
+  .why{grid-template-columns:1fr;gap:44px}
+  .find-top{grid-template-columns:1fr;gap:24px}
+  body::before{display:none}
+}
+@media (max-width:819px){
+  .tags{grid-template-columns:1fr;gap:64px;max-width:520px;margin-left:auto;margin-right:auto}
+  .tag{min-height:0}
+}
+@media (max-width:767px){
+  .top .btn--sm span{display:none}
+  .top .btn--sm{padding:7px}
+}
+@media (max-width:639px){
+  h1{font-size:clamp(34px,10vw,52px)}
+  .hero-sub{font-size:17px}
+  .elev{padding:0}
+  .elev svg{width:165%;max-width:none;margin-left:-32.5%}
+  .elev-cap{padding:12px 20px 0}
+  .ctas .btn{width:100%;justify-content:space-between}
+  .tag-wrap:nth-child(n){transform:rotate(0)}
+  .tag h3{font-size:34px}
+  .pills a{font-size:14px}
+  .strip{overflow:hidden}
+  .strip svg{width:230%;max-width:none;margin-left:-67%}
+  .tag .big{font-size:64px;bottom:44px}
+  .js .tags [data-reveal].is-in:nth-child(n){transform:rotate(-.6deg)}
+  .micro{gap:8px;letter-spacing:.1em}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .js [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2 1.4a12 12 0 0 0 7.1 7.1l1.4-2 4.2 1.6V19a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.7 2 2 0 0 1 5 3.5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.5-1.3 1.3-1.3H17V2.2h-2.6C11.7 2.2 10.4 4 10.4 6.4v2.1H8v3.3h2.4V22H14V11.8h2.6l.5-3.3z" fill="currentColor"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="ribbon">Concept redesign by Jeig Torio · not the business's official website</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Manor Garage Plymouth, back to top"><span class="badge" aria-hidden="true">M</span><span><b>Manor Garage</b><small>154 EXETER ST · PLYMOUTH</small></span></a>
+    <nav class="links" aria-label="Sections"><a href="#services">What we do</a><a href="#why">Why us</a><a href="#find">Find us</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn--rust btn--sm" href="tel:+441752660600"><span>Call the garage</span><i><svg aria-hidden="true"><use href="#i-phone"/></svg></i></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero intro" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="micro"><span>154 EXETER ST</span><span class="rule"></span><span>PLYMOUTH PL4 0HG</span></p>
+    <p class="mono eyebrow">Owner-run · back-street garage</p>
+    <h1 id="h1"><span class="ln"><span>The honest garage</span></span><span class="ln"><span><em>on Exeter Street.</em></span></span></h1>
+    <p class="hero-sub fade">MOTs, diagnostics and repairs from an owner-run garage at 154 Exeter Street. Personal service, and prices customers call very reasonable.</p>
+    <div class="ctas fade d1">
+      <a class="btn btn--rust" href="tel:+441752660600">Call +44 1752 660600<i><svg aria-hidden="true"><use href="#i-phone"/></svg></i></a>
+      <a class="btn btn--line" href="#services">See what we do<i><svg aria-hidden="true"><use href="#i-down"/></svg></i></a>
+    </div>
+  </div>
+
+  <figure class="elev">
+    <div class="elev-box">
+    <svg viewBox="0 0 1200 432" role="img" aria-labelledby="elev-t">
+      <title id="elev-t">Front elevation drawing of a small brick garage. The roller shutter rolls up to show a car on a lift and three hanging tags: MOTs, diagnostics, repairs.</title>
+      <defs>
+        <pattern id="brick" width="56" height="28" patternUnits="userSpaceOnUse">
+          <rect width="56" height="28" fill="#eadfc9"/>
+          <path d="M0 .5H56M0 14.5H56M28 1V14M.5 15V28M55.5 15V28" stroke="rgba(30,25,21,.2)" stroke-width="1" fill="none"/>
+        </pattern>
+        <clipPath id="door"><rect x="300" y="160" width="600" height="240"/></clipPath>
+      </defs>
+      <!-- dimension -->
+      <g class="e-thin">
+        <path d="M110 22H1090M110 14v16M1090 14v16"/>
+      </g>
+      <rect x="470" y="12" width="260" height="20" fill="#efe6d4"/>
+      <text x="600" y="26" text-anchor="middle" font-family="DM Mono,monospace" font-size="12" letter-spacing="2" fill="#1e1915">154 EXETER STREET · ELEV. A</text>
+      <!-- facade -->
+      <rect x="110" y="52" width="980" height="348" style="fill:url(#brick)" stroke="#1e1915" stroke-width="2.2"/>
+      <rect x="100" y="40" width="1000" height="12" class="e-line e-card"/>
+      <!-- fascia -->
+      <rect x="350" y="62" width="500" height="46" class="e-line e-card"/>
+      <text x="600" y="95" text-anchor="middle" font-family="Archivo,Arial Black,sans-serif" font-weight="800" font-stretch="125%" font-size="30" letter-spacing="3" fill="#1e1915" style="font-stretch:125%">MANOR GARAGE</text>
+      <path d="M470 101H730" stroke="#a3341c" stroke-width="3"/>
+      <!-- interior -->
+      <rect x="300" y="160" width="600" height="240" fill="#e2d5bd"/>
+      <rect x="300" y="160" width="600" height="240" fill="rgba(30,25,21,.07)"/>
+      <path class="e-hid" d="M300 372H900"/>
+      <rect x="520" y="166" width="160" height="5" fill="#f8f2e6" stroke="#1e1915" stroke-width="1.2"/>
+      <!-- lift -->
+      <rect x="352" y="196" width="16" height="204" class="e-line e-card"/>
+      <rect x="832" y="196" width="16" height="204" class="e-line e-card"/>
+      <path class="e-line" d="M368 358H452M748 358H832"/>
+      <!-- car on the lift -->
+      <path class="e-line e-card" d="M430 352L428 300Q430 288 446 284L500 278L540 252Q550 246 566 246H650Q664 246 676 254L716 278L760 284Q776 288 778 300V352Z"/>
+      <path class="e-line" style="fill:rgba(30,25,21,.12)" d="M548 276L566 254H604V276ZM614 254H650Q660 254 668 260L688 276H614Z"/>
+      <path class="e-thin" d="M440 312H770M606 280V346"/>
+      <circle cx="482" cy="352" r="24" fill="#2a231e"/><circle cx="482" cy="352" r="11" class="e-line e-card"/>
+      <circle cx="724" cy="352" r="24" fill="#2a231e"/><circle cx="724" cy="352" r="11" class="e-line e-card"/>
+      <!-- hanging tags -->
+      <g class="tg">
+        <g class="swing" data-t="0"><path class="e-thin" d="M455 160V186"/><path d="M402 190h106l8 8v34H394v-34z" class="e-line e-card"/><circle cx="455" cy="199" r="4" fill="#efe6d4" stroke="#a3341c" stroke-width="2"/><text x="455" y="222" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" letter-spacing="1.5" fill="#1e1915">MOTs</text></g>
+        <g class="swing" data-t="1"><path class="e-thin" d="M600 160V186"/><path d="M541 190h118l8 8v34H533v-34z" class="e-line e-card"/><circle cx="600" cy="199" r="4" fill="#efe6d4" stroke="#a3341c" stroke-width="2"/><text x="600" y="222" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" letter-spacing="1.5" fill="#1e1915">DIAGNOSTICS</text></g>
+        <g class="swing" data-t="2"><path class="e-thin" d="M745 160V186"/><path d="M692 190h106l8 8v34H684v-34z" class="e-line e-card"/><circle cx="745" cy="199" r="4" fill="#efe6d4" stroke="#a3341c" stroke-width="2"/><text x="745" y="222" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" letter-spacing="1.5" fill="#1e1915">REPAIRS</text></g>
+      </g>
+      <!-- shutter -->
+      <g clip-path="url(#door)">
+        <g class="shutter" transform="translate(0 -232)">
+          <rect x="300" y="160" width="600" height="240" fill="#d9ccb2"/>
+          <path class="e-thin" d="M300 175H900M300 190H900M300 205H900M300 220H900M300 235H900M300 250H900M300 265H900M300 280H900M300 295H900M300 310H900M300 325H900M300 340H900M300 355H900M300 370H900M300 385H900"/>
+          <path d="M300 179H900M300 194H900M300 209H900M300 224H900M300 239H900M300 254H900M300 269H900M300 284H900M300 299H900M300 314H900M300 329H900M300 344H900M300 359H900M300 374H900M300 389H900" stroke="rgba(30,25,21,.18)" stroke-width="1"/>
+          <rect x="300" y="390" width="600" height="10" fill="#1e1915"/>
+          <rect x="440" y="380" width="40" height="8" rx="2" class="e-line e-card"/>
+          <rect x="720" y="380" width="40" height="8" rx="2" class="e-line e-card"/>
+        </g>
+      </g>
+      <rect x="300" y="160" width="600" height="240" class="e-line"/>
+      <!-- lintel + drum -->
+      <rect x="290" y="122" width="620" height="20" fill="#3a302a" stroke="#1e1915" stroke-width="2.2"/>
+      <g fill="#efe6d4"><circle cx="312" cy="132" r="2.6"/><circle cx="374" cy="132" r="2.6"/><circle cx="436" cy="132" r="2.6"/><circle cx="498" cy="132" r="2.6"/><circle cx="560" cy="132" r="2.6"/><circle cx="640" cy="132" r="2.6"/><circle cx="702" cy="132" r="2.6"/><circle cx="764" cy="132" r="2.6"/><circle cx="826" cy="132" r="2.6"/><circle cx="888" cy="132" r="2.6"/></g>
+      <rect x="296" y="142" width="608" height="18" class="e-line e-card"/>
+      <path class="e-thin" d="M296 151H904"/>
+      <!-- lamp + plaque -->
+      <path class="e-line" style="fill:#f8f2e6" d="M205 170v18M190 188h30l-6 18h-18z"/>
+      <path d="M196 212l-10 14M205 214v16M214 212l10 14" stroke="#a3341c" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="995" cy="222" r="32" class="e-line e-card"/>
+      <circle cx="995" cy="222" r="25" fill="none" stroke="#a3341c" stroke-width="3"/>
+      <text x="995" y="229" text-anchor="middle" font-family="Archivo,Arial Black,sans-serif" font-weight="800" font-size="18" fill="#1e1915" style="font-stretch:125%">154</text>
+      <!-- pavement -->
+      <path class="e-line" d="M30 400H1170"/>
+      <path class="e-thin" d="M30 418H1170"/>
+      <path class="e-thin" d="M160 400v18M420 400v18M680 400v18M940 400v18"/>
+      <rect x="1010" y="403" width="44" height="12" fill="none" stroke="#1e1915" stroke-width="1.2"/>
+      <path class="e-thin" d="M1018 403v12M1026 403v12M1034 403v12M1042 403v12"/>
+    </svg>
+    </div>
+    <figcaption class="elev-cap"><span>FIG. A · FRONT ELEVATION · CONCEPT DRAWING</span><button class="toggle" type="button" aria-pressed="false">Pull the shutter down</button></figcaption>
+  </figure>
+</section>
+
+<section class="sec" id="services" aria-labelledby="h-services">
+  <div class="wrap">
+    <span class="mono kick" data-reveal>No. 01 · What we do</span>
+    <h2 id="h-services" data-reveal>MOTs, diagnostics,<br><em>repairs.</em></h2>
+    <p class="intro-l" data-reveal>Three jobs, one owner-run garage. Ask for a price when you call.</p>
+    <div class="tags">
+      <div class="tag-wrap" data-reveal data-t="0"><article class="tag" tabindex="0"><span class="mono">Tag 01</span><h3>MOTs</h3><p>Your MOT at a garage where you talk to the people who do the work.</p><span class="mono ask">Ask for a price</span><span class="big" aria-hidden="true">01</span></article></div>
+      <div class="tag-wrap" data-reveal data-t="1"><article class="tag" tabindex="0"><span class="mono">Tag 02</span><h3>Diagnostics</h3><p>Warning light, odd noise, or it just doesn't feel right? Bring it in and find out what's wrong.</p><span class="mono ask">Ask for a price</span><span class="big" aria-hidden="true">02</span></article></div>
+      <div class="tag-wrap" data-reveal data-t="2"><article class="tag" tabindex="0"><span class="mono">Tag 03</span><h3>Repairs</h3><p>Repairs with a personal service, at prices customers call very reasonable.</p><span class="mono ask">Ask for a price</span><span class="big" aria-hidden="true">03</span></article></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why" aria-labelledby="h-why" style="padding-top:0">
+  <div class="wrap why">
+    <figure class="ph" data-reveal>
+      <img src="assets/spanner-tall.webp" width="900" height="1012" loading="lazy" alt="Concept photo: a chrome open-end spanner on a workbench board">
+      <figcaption class="mono"><span>Concept photo · stock</span><span>Not the garage</span></figcaption>
+    </figure>
+    <div data-reveal>
+      <span class="mono kick">No. 02 · Why locals come back</span>
+      <h2 id="h-why">A proper<br><em>back-street</em> garage.</h2>
+      <ul class="ledger">
+        <li><span class="n">01</span><div><b>Owner-run</b><span>A back-street garage run by its owner, not a chain.</span></div></li>
+        <li><span class="n">02</span><div><b>Personal service</b><span>Customers mention the personal service they get here.</span></div></li>
+        <li><span class="n">03</span><div><b>Very reasonable prices</b><span>Customers say they're charged fairly. Ask for a price before any work.</span></div></li>
+        <li><span class="n">04</span><div><b>Call or WhatsApp</b><span>The same number works for both: +44 1752 660600.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="find" aria-labelledby="h-find" style="padding-top:0">
+  <div class="wrap">
+    <div class="find-top" data-reveal>
+      <div><span class="mono kick">No. 03 · Find us</span><h2 id="h-find">154 Exeter Street,<br>Plymouth PL4 0HG.</h2></div>
+      <a class="btn btn--rust" href="https://www.google.com/maps/search/?api=1&amp;query=Manor+Garage+Plymouth" target="_blank" rel="noopener">Open in Google Maps<i><svg aria-hidden="true"><use href="#i-arrow"/></svg></i></a>
+    </div>
+    <div class="strip" data-reveal>
+      <svg viewBox="0 0 1200 300" role="img" aria-label="Schematic street strip: Manor Garage marked at number 154 on Exeter Street, not to scale">
+        <defs><pattern id="sg" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="rgba(30,25,21,.06)"/></pattern></defs>
+        <rect width="1200" height="300" fill="url(#sg)"/>
+        <g fill="#eadfc9" stroke="rgba(30,25,21,.35)" stroke-width="1.4">
+          <path d="M40 150V92h110v58M170 150V70l50-26 50 26v80M290 150V84h130v66M440 150V96h96v54M690 150V78h120v72M830 150V90h86v60M936 150V66l56-28 56 28v84M1068 150V88h96v62"/>
+        </g>
+        <path d="M556 150V64h114v86" fill="#f8f2e6" stroke="#a3341c" stroke-width="3"/>
+        <path d="M576 150v-46h74v46" fill="none" stroke="#1e1915" stroke-width="1.6"/>
+        <path d="M576 112h74M576 120h74M576 128h74M576 136h74M576 144h74" stroke="rgba(30,25,21,.35)"/>
+        <rect x="0" y="150" width="1200" height="10" fill="#d9ccb2"/>
+        <rect x="0" y="160" width="1200" height="90" fill="#2a231e"/>
+        <path d="M0 205H1200" stroke="#efe6d4" stroke-width="2" stroke-dasharray="22 16"/>
+        <text x="60" y="190" font-family="DM Mono,monospace" font-size="15" letter-spacing="5" fill="#efe6d4">EXETER ST</text>
+        <rect x="0" y="250" width="1200" height="10" fill="#d9ccb2"/>
+        <g transform="translate(613 30)">
+          <path d="M0 34s-18-15-18-29a18 18 0 0 1 36 0c0 14-18 29-18 29z" fill="#a3341c" stroke="#1e1915" stroke-width="2"/>
+          <circle cx="0" cy="4" r="6" fill="#f8f2e6"/>
+        </g>
+        <rect x="690" y="18" width="92" height="24" fill="#a3341c"/>
+        <text x="736" y="35" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" letter-spacing="1.5" fill="#f8f2e6">No. 154</text>
+        <g transform="translate(1140 278)" font-family="DM Mono,monospace" font-size="11" fill="#1e1915">
+          <path d="M0-14l6 18-6-4-6 4z" fill="#1e1915"/><text x="14" y="2">N</text>
+        </g>
+      </svg>
+      <span class="cap" style="right:auto;left:14px">SCHEMATIC · NOT TO SCALE</span>
+    </div>
+    <div class="find-addr" data-reveal><span>Manor Garage Plymouth, 154 Exeter St, Plymouth PL4 0HG</span><span class="mono">Call ahead for opening times</span></div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <span class="mono kick" data-reveal>No. 04 · Contact</span>
+    <h2 id="h-contact" data-reveal>Something not right?<br>Ring the garage.</h2>
+    <div data-reveal>
+      <a class="bigtel" href="tel:+441752660600">+44 1752 660600</a>
+      <span class="mono wa">Call or WhatsApp</span>
+    </div>
+    <div class="pills" data-reveal>
+      <a href="mailto:manorgarageplymouth@gmail.com"><i><svg aria-hidden="true"><use href="#i-mail"/></svg></i>manorgarageplymouth@gmail.com</a>
+      <a href="https://www.facebook.com/manorgarageplymouth" target="_blank" rel="noopener"><i><svg aria-hidden="true"><use href="#i-fb"/></svg></i>Manor Garage on Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="badge" aria-hidden="true">M</span><span><b>Manor Garage</b><small>154 EXETER ST · PLYMOUTH</small></span></a>
+    <nav aria-label="Footer"><a href="#services">What we do</a><a href="#why">Why us</a><a href="#find">Find us</a><a href="#contact">Contact</a></nav>
+    <span>Concept redesign by Jeig Torio · not the business's official website</span>
+    <span class="mono">Drawings are concept art · photo is a stock concept placeholder</span>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+441752660600"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call Manor Garage</a>
+
+<script>
+(function(){
+  var d=document;d.documentElement.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var intro=d.querySelector('.intro');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){intro.classList.add('go')})});
+  var sh=d.querySelector('.shutter'),btn=d.querySelector('.toggle'),sw=[].slice.call(d.querySelectorAll('.swing'));
+  var OPEN='translate(0px,-232px)',SHUT='translate(0px,0px)',isOpen=true;
+  function swing(i,delay){var g=sw[i];if(!g||reduce)return;setTimeout(function(){g.classList.remove('go');void g.getBBox();g.classList.add('go')},delay||0)}
+  function setOpen(o){
+    isOpen=o;sh.style.transform=o?OPEN:SHUT;
+    btn.textContent=o?'Pull the shutter down':'Open up';btn.setAttribute('aria-pressed',o?'false':'true');
+    if(o)sw.forEach(function(_,i){swing(i,1500+i*120)});
+  }
+  sh.removeAttribute('transform');
+  if(reduce){sh.style.transform=OPEN}
+  else{
+    sh.style.transition='none';sh.style.transform=SHUT;void sh.getBBox();
+    setTimeout(function(){sh.style.transition='';setOpen(true)},1000);
+  }
+  btn.addEventListener('click',function(){setOpen(!isOpen)});
+  sw.forEach(function(g){g.addEventListener('animationend',function(){g.classList.remove('go')})});
+  [].slice.call(d.querySelectorAll('.tag-wrap')).forEach(function(w){
+    var i=+w.dataset.t;w.addEventListener('mouseenter',function(){if(isOpen)swing(i,0)});
+    w.addEventListener('focusin',function(){if(isOpen)swing(i,0)});
+  });
+  var els=[].slice.call(d.querySelectorAll('[data-reveal]'));
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.15});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('is-in')})},2500);
+  }else{els.forEach(function(e){e.classList.add('is-in')})}
+})();
+</script>
+</body>
+</html>
